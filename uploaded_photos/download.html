@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foto herunterladen</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      .download-button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #1abc9c;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+      .download-button:hover {
+        background-color: #16a085;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="photo" src="" alt="Foto" />
+    <button id="downloadButton" class="download-button">
+      Foto herunterladen
+    </button>
+    <button id="saveToPhotosButton" class="download-button">
+      In Fotos speichern (Teilen)
+    </button>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const photoUrl = urlParams.get("photo");
+      document.getElementById("photo").src = photoUrl;
+
+      document
+        .getElementById("downloadButton")
+        .addEventListener("click", () => {
+          const randomName = `foto-${Math.floor(
+            Math.random() * 1000
+          )}`;
+          const link = document.createElement("a");
+          link.href = photoUrl;
+          link.download = `${randomName}.jpg`;
+          link.click();
+        });
+
+      document
+        .getElementById("saveToPhotosButton")
+        .addEventListener("click", async () => {
+          try {
+            const response = await fetch(photoUrl);
+            const blob = await response.blob();
+            const file = new File([blob], "photo.jpg", { type: blob.type });
+
+            if (navigator.canShare && navigator.canShare({ files: [file] })) {
+              await navigator.share({
+                files: [file],
+                title: "Foto",
+                text: "Hier ist dein Foto",
+              });
+            } else {
+              alert("Teilen nicht unterstützt");
+            }
+          } catch (error) {
+            console.error("Fehler beim Teilen:", error);
+          }
+        });
+    </script>
+  </body>
+</html>
