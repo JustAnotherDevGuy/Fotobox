@@ -18,7 +18,7 @@ Requirements:
 
 Installation:
 
-1.  Clone the Repository: Clone the repository to your web server's root directory:bashCode kopieren  
+1.  Clone the Repository: Clone the repository to your web server's root directory
       
     git clone https://github.com/JustAnotherDevGuy/Fotobox.git .
 2.    
