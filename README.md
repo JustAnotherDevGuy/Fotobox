@@ -26,7 +26,7 @@ An easy-to-use photobox built with HTML, CSS, PHP, and JavaScript.
    - `upload.php`
 5. **Access the Project**: Open the project in your browser:
    ```bash
-   http://yourserver/
+   https://YourUrl/
    ```
 
 ## Usage
