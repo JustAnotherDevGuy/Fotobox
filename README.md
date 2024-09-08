@@ -1,9 +1,9 @@
-# Fotobox
+# Photobooth
 
-An easy-to-use photobox built with HTML, CSS, PHP, and JavaScript.
+An easy-to-use Photobooth built with HTML, CSS, PHP, and JavaScript.
 
 ## Features
-- **Simple Setup**: Quickly get the photobox up and running with minimal configuration.
+- **Simple Setup**: Quickly get the Photobooth up and running with minimal configuration.
 - **Customizable**: Modify the look and feel of the photobox using HTML and CSS.
 - **Photo Capture**: Capture photos directly from the browser using JavaScript.
 - **Server-Side Processing**: Handle photo saving and processing with PHP.
@@ -30,12 +30,12 @@ An easy-to-use photobox built with HTML, CSS, PHP, and JavaScript.
    ```
 
 ## Usage
-- **Interact**: Use a keyboard to interact with the fotobox.
+- **Interact**: Use a keyboard to interact with the Photobooth.
 - **Capture Photos**: Follow the on-screen instructions to capture and save photos.
 - **Customize**: Edit the HTML and CSS files to customize the interface.
 
 ## Customization
-To personalize the fotobox:
+To personalize the Photobooth:
 - **HTML**: Modify the structure in `index.html`.
 - **CSS**: Adjust the styling in `styles.css`.
 - **PHP**: Customize backend processing in `upload.php`.
@@ -52,4 +52,3 @@ Feel free to fork this repository, make changes, and submit pull requests. Contr
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-```
