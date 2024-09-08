@@ -36,7 +36,7 @@ An easy-to-use Photobooth built with HTML, CSS, PHP, and JavaScript.
 
 ## Customization
 To personalize the Photobooth:
-- **HTML**: Modify the structure in `index.html`.
+- **PHP (Frontend)**: Modify the structure in `index.php`.
 - **CSS**: Adjust the styling in `styles.css`.
 - **PHP**: Customize backend processing in `upload.php`.
 - **JavaScript**: Enhance functionality in `script.js`.
