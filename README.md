@@ -17,7 +17,7 @@ An easy-to-use Photobooth built with HTML, CSS, PHP, and JavaScript.
 ## Installation
 1. **Clone the Repository**: Clone the repository to your web server's root directory:
    ```bash
-   git clone https://github.com/JustAnotherDevGuy/Fotobox.git
+   git clone https://github.com/JustAnotherDevGuy/Photobooth.git
    ```
 2. Ensure that the repository’s contents are directly in the web server’s root directory, not in a subdirectory.
 3. **Configure PHP**: Make sure your web server has PHP enabled and is correctly configured to serve the project.
